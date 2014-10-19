@@ -1,0 +1,9 @@
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+.line-num {
+	margin-right: 10px;
+	color: #ccc;
+}
+pre {
+	background-color: #23241f;
+	padding: 0px;
+}
