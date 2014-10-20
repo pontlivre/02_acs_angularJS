@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-md-12">
+<marked>
+
+# このサイトで使用しているライブラリ
+
+このサイトでは、以下のライブラリを使用してCGIを作ることなく、HTML+JavaScriptで動的なコンテンツを実現しています。
+
+## AngularJS
+
+https://angularjs.org/
+
+このサイトで解説しているクライアントサイドMVCフレームワーク。
+jQueryを直接使わずに、HTMLの書き換えが可能。
+また、コードはコントローラやサービスと言ったコンポーネントに書かれることになるため、
+再利用性、可読性の高いコードになり保守性が向上するといったメリットがある。
+
+## Bootstrap3
+
+http://getbootstrap.com/
+
+以前、自由情報でも紹介したCSSフレームワークで、GridSystemにより簡単に段組、レスポンシブデザイン	が可能。
+ドロップダウンやボタンナビゲーションバーなど、開発でよく使うUIがCSSだけで簡単に作成することが出来る。
+
+## jQuery
+
+http://jquery.com/
+
+誰もが知っているDOM操作ライブラリ。
+Bootstrap3を使うのに必要。このサイトでのサンプルでは、使わない予定。
+
+## marked
+
+https://github.com/chjj/marked
+
+Markdown形式のテキストをHtml形式に変換してくれるJavaScriptライブラリ。
+
+自由情報の内容は全てMarkdown形式で書いてきたので、このライブラリのお陰で自由情報のテキストをそのまま、コンテンツに埋め込むことでHTMLに変換してくれるというすごくありがたいライブラリ。  
+ただ、Markdown中に挿入したコードには、行番号をつけてくれないので独自にカスタマイズして行番号を表示している。
+
+## highlight.js
+
+Markdown(preタグ)のコード部分に対してシンタックスハイライトを適応してくれるライブラリ。  
+103個もの言語に対応しており、Styleも49種類ある。  
+このサイトでは、私が愛用しているSublimeTextエディタと同じ配色の monokai_sublime.css を使用。
+
+## angular-marked
+
+markedをAngularJSのディレクティブを使って呼び出せるようにしてくれるライブラリ。  
+これにより以下のようにしてhtml中にMarkdown書いたり、includeしたりするとHTMLに変換してくれる。
+
+
+**htmlに直接Markdownを書く場合**
+
+```html
+&lt;marked>
+# 見出し
+## 中見出し
+
+* リスト
+* リスト
+
+&lt;/marked>
+```
+
+**Markdownで書かれたファイルを読み込む場合**
+
+```html
+  &lt;marked ng-include="'partials/sample01.md'">&lt;/marked>
+```  
+
+</marked>
+  </div>
+</div>

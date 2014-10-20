@@ -1,7 +1,15 @@
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 .line-num {
-	margin-right: 10px;
+	margin-right: 20px;
 	color: #ccc;
+}
+.doc-scrollable {
+  max-height: 700px;
+  overflow-y: scroll;
+}
+pre.default {
+  background-color: #f5f5f5;
+  padding: 9.5px;
 }
 pre {
 	background-color: #23241f;
