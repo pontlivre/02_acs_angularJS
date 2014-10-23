@@ -12,7 +12,7 @@ https://angularjs.org/
 
 このサイトで解説しているクライアントサイドMVCフレームワーク。
 jQueryを直接使わずに、HTMLの書き換えが可能。
-また、コードはコントローラやサービスと言ったコンポーネントに書かれることになるため、
+また、コードはコントローラやサービスと言ったコンポーネントとして書くことが義務づけられるため、
 再利用性、可読性の高いコードになり保守性が向上するといったメリットがある。
 
 ## Bootstrap3
@@ -27,24 +27,28 @@ http://getbootstrap.com/
 http://jquery.com/
 
 誰もが知っているDOM操作ライブラリ。
-Bootstrap3を使うのに必要。このサイトでのサンプルでは、使わない予定。
+Bootstrap3を使うのに必要。このサイトでのサンプルでは直接は使わない予定。
 
 ## marked
 
 https://github.com/chjj/marked
 
-Markdown形式のテキストをHtml形式に変換してくれるJavaScriptライブラリ。
+[Markdown](http://ja.wikipedia.org/wiki/Markdown)形式のテキストをHtml形式に変換してくれるJavaScriptライブラリ。
 
 自由情報の内容は全てMarkdown形式で書いてきたので、このライブラリのお陰で自由情報のテキストをそのまま、コンテンツに埋め込むことでHTMLに変換してくれるというすごくありがたいライブラリ。  
 ただ、Markdown中に挿入したコードには、行番号をつけてくれないので独自にカスタマイズして行番号を表示している。
 
 ## highlight.js
 
+https://highlightjs.org/
+
 Markdown(preタグ)のコード部分に対してシンタックスハイライトを適応してくれるライブラリ。  
 103個もの言語に対応しており、Styleも49種類ある。  
 このサイトでは、私が愛用しているSublimeTextエディタと同じ配色の monokai_sublime.css を使用。
 
 ## angular-marked
+
+http://ngmodules.org/modules/angular-marked
 
 markedをAngularJSのディレクティブを使って呼び出せるようにしてくれるライブラリ。  
 これにより以下のようにしてhtml中にMarkdown書いたり、includeしたりするとHTMLに変換してくれる。
