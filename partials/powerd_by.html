@@ -33,16 +33,17 @@ Bootstrap3を使うのに必要。このサイトでのサンプルでは直接�
 
 https://github.com/chjj/marked
 
-[Markdown](http://ja.wikipedia.org/wiki/Markdown)形式のテキストをHtml形式に変換してくれるJavaScriptライブラリ。
+[Markdown](http://ja.wikipedia.org/wiki/Markdown)形式のテキストをHTML形式に変換してくれるJavaScriptライブラリ。
 
-自由情報の内容は全てMarkdown形式で書いてきたので、このライブラリのお陰で自由情報のテキストをそのまま、コンテンツに埋め込むことでHTMLに変換してくれるというすごくありがたいライブラリ。  
+このサイトのコンテンツはMarkdown形式のテキストで書かれており、JavaScriptにてHTMLのタグに変換しています（そのため表示が遅いかも）。  
+自由情報も極力Markdown形式で書いてきたので、テキストをそのまま埋め込むだけでHTMLとして表示してくれるので、すごく楽。  
 ただ、Markdown中に挿入したコードには、行番号をつけてくれないので独自にカスタマイズして行番号を表示している。
 
 ## highlight.js
 
 https://highlightjs.org/
 
-Markdown(preタグ)のコード部分に対してシンタックスハイライトを適応してくれるライブラリ。  
+Markdownのコード部分(preタグ)に対してシンタックスハイライトを適応してくれるライブラリ。  
 103個もの言語に対応しており、Styleも49種類ある。  
 このサイトでは、私が愛用しているSublimeTextエディタと同じ配色の monokai_sublime.css を使用。
 
@@ -51,7 +52,7 @@ Markdown(preタグ)のコード部分に対してシンタックスハイライ�
 http://ngmodules.org/modules/angular-marked
 
 markedをAngularJSのディレクティブを使って呼び出せるようにしてくれるライブラリ。  
-これにより以下のようにしてhtml中にMarkdown書いたり、includeしたりするとHTMLに変換してくれる。
+これにより以下のようにしてHTML中にMarkdown書いたり、includeしたりするとHTMLに変換してくれる。
 
 
 **htmlに直接Markdownを書く場合**
