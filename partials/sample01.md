@@ -58,9 +58,8 @@ AngularJSの特徴として、以下をあげます。
 指します。実際、双方向データバインディングで処理されているDOMの
 書き換え部分では、簡易版のjQuery（jqLite）も含まれています。
 
->  jqLiteでは、最小限のjQueryのメソッドをバンドルしたものです。
->  AngularJSの前に本物のjQueryが読み込まれていると、jqLiteではなく
->  jQueryが使われるようになります。
+`jqLiteでは、最小限のjQueryのメソッドをバンドルしたものです。
+AngularJSの前に本物のjQueryが読み込まれていると、jqLiteではなくjQueryが使われるようになります。`
 
 ### 学習コストが高い
 

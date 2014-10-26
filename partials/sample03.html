@@ -1,0 +1,31 @@
+<div class="row">
+  <tabset>
+    <tab>
+      <tab-heading>テキスト</tab-heading>
+      <div class="doc-scrollable-none" marked ng-include="'partials/sample03.md'"></div>
+    </tab>
+    <tab>
+      <tab-heading>サンプル1</tab-heading>
+      <div class="page-header"><h2>Executable</h2></div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div ng-controller="Sample03Ctrl">
+              <dl>
+                <dt>NAME</dt>
+                <dd>{{model.name}}</dd>
+              </dl>
+            </div>
+          </div><!-- / .col-md-12 -->
+        </div><!-- / .row -->
+        <div class="row">
+          <div class="page-header">
+            <h2>Code</h2> 
+          </div>
+          <div class="col-md-12">
+          </div><!-- / .col-md-12 -->
+        </div><!-- / .row -->
+      </div><!-- / .container -->
+    </tab>
+  </tabset>
+</div>    

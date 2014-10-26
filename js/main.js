@@ -27,6 +27,9 @@
                 // controller : 'Sample02Ctrl',
                 templateUrl: 'partials/sample02.html'
             })
+            .when('/03', {
+                templateUrl: 'partials/sample03.html'
+            })
             .when('/powerdBy', {
                 controller : 'pageCtrl',
                 templateUrl: 'partials/powerd_by.html'
@@ -61,19 +64,13 @@
     }])
     .controller('topCtrl', ['$scope', function($scope){
     }])
-    /*
-    .controller('Sample02Ctrl', ['$scope', function($scope){
-        console.info("11");
-        console.info(app);
-        $scope.books = [
-            { "title" : "Java入門"},
-            { "title" : "JavaScript入門"},
-            { "title" : "Ruby入門"}
-        ];
-        console.info("12");
-    }])
-*/
-    .run(function() {
-    });
+    .run(['$window', function($window) {
+        /*
+        var tabHeight = 62;
+        var $w = $(window);
+        console.info("width=" + $w.width());
+        console.info("height=" + $w.height());
+        */
+    }]);
 
 })(angular);
