@@ -1,5 +1,6 @@
 (function(angular){
 
+    var app =
     angular.module('app', ['ngRoute', 'hc.marked', 'ui.bootstrap'])
         .config(['markedProvider', function(markedProvider) {
             markedProvider.setOptions({
@@ -23,7 +24,7 @@
                 templateUrl: 'partials/sample01.html'
             })
             .when('/02', {
-                controller : 'pageCtrl',
+                // controller : 'Sample02Ctrl',
                 templateUrl: 'partials/sample02.html'
             })
             .when('/powerdBy', {
@@ -54,14 +55,24 @@
             } else {
                 $scope.pageInfo.no = 'top';
             }
-            console.info('change=' + $location.path());
-            console.info(data);
         });
     }])
     .controller('pageCtrl', ['$scope', function($scope){
     }])
     .controller('topCtrl', ['$scope', function($scope){
     }])
+    /*
+    .controller('Sample02Ctrl', ['$scope', function($scope){
+        console.info("11");
+        console.info(app);
+        $scope.books = [
+            { "title" : "Java入門"},
+            { "title" : "JavaScript入門"},
+            { "title" : "Ruby入門"}
+        ];
+        console.info("12");
+    }])
+*/
     .run(function() {
     });
 
