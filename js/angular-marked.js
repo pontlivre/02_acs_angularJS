@@ -240,7 +240,6 @@
 
         function set(val) {
           element.html(marked(val || '', scope.opts || null));
-          // appendLineNumbers(element, marked(val || '', scope.opts || null));
           appendLineNumbers(element);
         }
         function appendLineNumbers(element) {
