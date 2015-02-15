@@ -5,7 +5,8 @@
         .config(['markedProvider', function(markedProvider) {
             markedProvider.setOptions({
                 gfm: true,
-                tables: true
+                tables: true,
+                // sanitize: true
                 /*
                 highlight: function (code) {
                     return hljs.highlightAuto(code).value;

@@ -15,3 +15,7 @@ pre {
 	background-color: #23241f;
 	padding: 0px;
 }
+
+ul.sample {
+    list-style-type: disc;
+}
