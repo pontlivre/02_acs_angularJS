@@ -5,7 +5,7 @@
       <div class="doc-scrollable-none" marked ng-include="'partials/sample03.md'"></div>
     </tab>
     <tab>
-      <tab-heading>サンプル1</tab-heading>
+      <tab-heading>サンプル</tab-heading>
       <div class="page-header"><h2>Executable</h2></div>
       <div class="container-fluid">
         <div class="row">
@@ -20,21 +20,37 @@
               </li>
             </ul>
 
-            <h3>2.通貨フィルター(currency)</h3>
-
+            <h3>6. 表示件数フィルター(limitTo)</h3>
             <ul>
-            <li>{{100|currency}}</li>
-            <li>{{1000|currency}}</li>
+              <li ng-repeat="member in members | limitTo:3">
+              {{member.name}} {{member.height}}
+              </li>
             </ul>
 
-            <h3>3. 日付フィルター(date)</h3>            
-
+            <h3>7. ソートフィルター(orderBy)</h3>
             <ul>
-            <li>フィルターなし：{{members[0].birthday}}</li>
-            <li>yyyy/MM/dd：{{members[0].birthday|date:'yyyy/MM/dd'}}</li>
-            <li>yyy年M月d日：{{members[0].birthday|date:'yyyy年M月d日'}}</li>
+              <li ng-repeat="member in members | orderBy:'-height'|limitTo:3">
+              {{member.name}} {{member.height}}
+              </li>
             </ul>
 
+            <h3>8. フィルタリングフィルター(filter)</h3>
+            <p>検索：<input type="text" ng-model="query"></p>
+            <table class="table">
+            <tr>
+              <th>名前</th>
+              <th>ポジション</th>
+              <th>生年月日</th>
+              <th>身長</th>
+            </tr>
+            <tr ng-repeat="member in members | filter:query">
+              <th>{{member.name}}</th>
+              <th>{{member.position}}</th>
+              <th>{{member.birthday | date:'M/d'}}</th>
+              <th>{{member.height}}</th>
+            </tr>
+            </table>
+  
           </div><!-- / .col-md-12 -->
         </div><!-- / .row -->
         <div class="row">
@@ -42,6 +58,51 @@
             <h2>Code</h2> 
           </div>
           <div class="col-md-12">
+            <marked>
+HTML
+```html            
+&lt;div ng-controller="Sample03Ctrl">
+&lt;h3>1.大文字／小文字フィルター(lowercase/uppercase)&lt;/h3>
+&lt;ul >
+  &lt;li ng-repeat="member in members">
+  {{$index}}
+  &lt;span ng-show="$odd">{{member.name|lowercase}}&lt;/span>
+  &lt;span ng-show="$even">{{member.name|uppercase}}&lt;/span>
+  &lt;/li>
+&lt;/ul>
+
+&lt;h3>6. 表示件数フィルター(limitTo)&lt;/h3>
+&lt;ul>
+  &lt;li ng-repeat="member in members | limitTo:3">
+  {{member.name}} {{member.height}}
+  &lt;/li>
+&lt;/ul>
+
+&lt;h3>7. ソートフィルター(orderBy)&lt;/h3>
+&lt;ul>
+  &lt;li ng-repeat="member in members | orderBy:'-height'|limitTo:3">
+  {{member.name}} {{member.height}}
+  &lt;/li>
+&lt;/ul>
+
+&lt;h3>8. フィルタリングフィルター(filter)&lt;/h3>
+&lt;p>検索：&lt;input type="text" ng-model="query.name">&lt;/p>
+&lt;table class="table">
+&lt;tr>
+  &lt;th>名前&lt;/th>
+  &lt;th>ポジション&lt;/th>
+  &lt;th>生年月日&lt;/th>
+  &lt;th>身長&lt;/th>
+&lt;/tr>
+&lt;tr ng-repeat="member in members | filter:query">
+  &lt;th>{{member.name}}&lt;/th>
+  &lt;th>{{member.position}}&lt;/th>
+  &lt;th>{{member.birthday | date:'M/d'}}&lt;/th>
+  &lt;th>{{member.height}}&lt;/th>
+&lt;/tr>
+&lt;/table>
+```
+            </marked>          
           </div><!-- / .col-md-12 -->
         </div><!-- / .row -->
       </div><!-- / .container -->

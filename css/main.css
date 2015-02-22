@@ -19,3 +19,7 @@ pre {
 ul.sample {
     list-style-type: disc;
 }
+
+.slide-button-wrapper {
+    margin: 10px 8px;
+}
